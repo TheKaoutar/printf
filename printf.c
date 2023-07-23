@@ -1,4 +1,8 @@
 #include <unistd.h>
+#include <limits.h>
+#include <stdio.h>
+#include "main.h"
+
 /**
  * p - write to the console
  * @c: character
