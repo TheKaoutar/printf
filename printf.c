@@ -1,11 +1,34 @@
+#include <unistd.h>
+#include <string.h>
+#include <stdarg.h>
+#include <limits.h>
+#include <stdio.h>
 #include "main.h"
 
+/**
+ * p - write to the console
+ * @c: character
+ * Return: nothing
+ */
+void p(char c)
+{
+char *pc = &c;
+write(STDOUT_FILENO, pc, sizeof(c));
+}
+/**
+ * ps - write to the console
+ * @s: string
+ * Return: nothing
+ */
+void ps(char *s)
+{
+write(STDOUT_FILENO, s, strlen(s));
+}
 /**
  * _printf - print to the console
  * @format: specifier
  * Return: integer
  */
-
 int _printf(const char *format, ...)
 {
 int i = 0;
