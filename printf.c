@@ -1,8 +1,3 @@
-#include <unistd.h>
-#include <string.h>
-#include <stdarg.h>
-#include <limits.h>
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -29,7 +24,6 @@ write(STDOUT_FILENO, s, strlen(s));
  * @format: specifier
  * Return: integer
  */
-
 int _printf(const char *format, ...)
 {
 int i = 0;
